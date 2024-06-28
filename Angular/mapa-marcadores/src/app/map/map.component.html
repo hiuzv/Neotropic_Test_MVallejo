@@ -1,0 +1,11 @@
+<div id="map" style="height: 600px;"></div>
+<div>
+  <h3>Detalles del Marcador</h3>
+  <div *ngIf="selectedMarker">
+    <p><strong>Nombre:</strong> {{ selectedMarker.name }}</p>
+    <p><strong>Descripción:</strong> {{ selectedMarker.description }}</p>
+    <label>Nombre: <input [(ngModel)]="selectedMarker.name"></label>
+    <label>Descripción: <input [(ngModel)]="selectedMarker.description"></label>
+    <button (click)="updateMarker()">Guardar</button>
+  </div>
+</div>
